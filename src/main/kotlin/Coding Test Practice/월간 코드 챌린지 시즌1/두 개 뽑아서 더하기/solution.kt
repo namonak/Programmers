@@ -2,7 +2,7 @@ package `Coding Test Practice`.`월간 코드 챌린지 시즌1`.`두 개 뽑아
 
 class Solution {
     fun solution(numbers: IntArray): IntArray {
-        var answer = mutableListOf<Int>()
+        val answer = mutableListOf<Int>()
 
         for (i in numbers.indices) {
             for (j in i + 1 until numbers.size) {
@@ -12,8 +12,6 @@ class Solution {
             }
         }
 
-        answer.sort()
-
-        return answer.toIntArray()
+        return answer.toSortedSet().toIntArray()
     }
 }
